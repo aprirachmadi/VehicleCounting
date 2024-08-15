@@ -2,6 +2,11 @@
 
 This project implements a multi-gate vehicle detection system using the YOLOv8 model. The system tracks and counts vehicles as they pass through predefined gates in a video. The project leverages pretrained YOLOv8 weights for object detection and tracking.
 
+## Environment Setup
+- Runtime: Kaggle Notebook
+- CUDA Device: Tesla T4
+- Python version: 3.10.13
+
 ## Project Structure
 
 ```plaintext
