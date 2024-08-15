@@ -91,7 +91,8 @@ crossed_objects = [defaultdict(bool) for _ in range(8)] # change the number of d
 ```
 results = model.track(frame,  classes=[2, 5], conf=0.3, iou=0.5, persist=True, tracker="bytetrack.yaml") # Add class id on classes list
 ```
-# please refer to model.names to get the coresponding class id
+please refer to model.names to get the coresponding class id
+
 4. Changing the Input Video Path
 If your video file is in a different location or has a different name, update the video_path variable in the vehicle_detection.py script:
 ```
