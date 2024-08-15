@@ -23,38 +23,47 @@ vehicle_detection_project/
 ├── requirements.txt                       # List of dependencies for the project
 ├── README.md                              # Project documentation
 └── .gitignore                             # Files and directories to ignore in Git
+```
+
 Requirements
 Before running the project, ensure you have the following dependencies installed:
-
+```
 Python 3.8+
 ultralytics
 supervision
 opencv-python
-You can install these dependencies using the following command:
+```
 
-bash
-Copy code
+You can install these dependencies using the following command:
+```
 pip install -r requirements.txt
+```
 Note: Make sure to have a GPU-enabled machine for better performance, as YOLOv8 is computationally intensive.
 
 How to Run
 1. Clone the Repository
 Clone this repository to your local machine:
-
-bash
-Copy code
+```
 git clone https://github.com/yourusername/vehicle_detection_project.git
 cd vehicle_detection_project
+```
+
 2. Place Your Input Video
 Place the input video file (.mp4 format) into the data/ directory. The default name expected is input_video.mp4. If your file has a different name, you will need to modify the script accordingly.
 
 3. Run the Python Script
 Execute the vehicle detection script:
-
-bash
-Copy code
+```
 python src/vehicle_detection.py
+```
 This script will process the video and generate an output video with vehicle detections and gate crossing counts. The output video will be saved in the output/ directory as output_multi_gate_vehicle_detection.mp4.
+
+3. Run the Python Notebook (Alternative)
+Open and run the vehicle detection notebook:
+Navigate to the notebooks/ directory and open the vehicle_detection_notebook.ipynb file using Jupyter Notebook, Jupyter Lab, or any compatible environment.
+Run each cell sequentially by selecting the cell and clicking the "Run" button or pressing Shift + Enter. The notebook will process the video, display annotated frames with detected vehicles, and show the gate crossing counts.
+
+Ensure that all required dependencies are installed, and modify the input video path if necessary.
 
 4. Review the Output
 After the script finishes running, you can find the processed video in the output/ directory. The video will display the vehicles detected and annotated with the gates they have crossed.
@@ -62,31 +71,12 @@ After the script finishes running, you can find the processed video in the outpu
 Customization
 Adjusting Gate Coordinates
 If you need to change the gate positions, you can modify the coordinates in the vehicle_detection.py script:
-
-python
-Copy code
+```
 START_1, END_1 = sv.Point(10, 135), sv.Point(87, 151)
 # ...
+```
 Changing the Input Video Path
 If your video file is in a different location or has a different name, update the video_path variable in the vehicle_detection.py script:
-
-python
-Copy code
+```
 video_path = "data/your_video_name.mp4"
-Contributing
-Contributions are welcome! Feel free to submit a pull request or open an issue for any bugs or feature requests.
-
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-vbnet
-Copy code
-
-### Key Points:
-- **Project Structure:** Describes where each file should be placed.
-- **Dependencies:** Lists the Python packages required for running the system.
-- **Running Instructions:** Step-by-step guide to run the system from start to finish.
-- **Customization:** Information on how to modify the script if needed.
-- **Contributing and License:** Encourages contributions and provides licensing information.
-
-Make sure to adjust any paths or project-specific details as needed before using this `READ
+```
