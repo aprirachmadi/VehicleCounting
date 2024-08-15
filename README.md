@@ -5,7 +5,7 @@ This project implements a multi-gate vehicle detection system using the YOLOv8 m
 ## Project Structure
 
 ```plaintext
-vehicle_detection_project/
+VehicleCounting/
 │
 ├── src/
 │   ├── vehicle_detection.py               # Main script for vehicle detection
@@ -69,13 +69,30 @@ Ensure that all required dependencies are installed, and modify the input video 
 After the script finishes running, you can find the processed video in the output/ directory. The video will display the vehicles detected and annotated with the gates they have crossed.
 
 Customization
-Adjusting Gate Coordinates
+1. Adjusting Gate Coordinates
 If you need to change the gate positions, you can modify the coordinates in the vehicle_detection.py script:
 ```
 START_1, END_1 = sv.Point(10, 135), sv.Point(87, 151)
 # ...
 ```
-Changing the Input Video Path
+2. Add more gate
+If you need to add more gate, you can modify the coordinates in the vehicle_detection.py script:
+```
+START_1, END_1 = sv.Point(10, 135), sv.Point(87, 151) # Add your own define gate
+# ...
+
+gates = [
+    (START_1, END_1),
+    # ... # Add defined gate
+
+crossed_objects = [defaultdict(bool) for _ in range(8)] # change the number of dictionary equal to number of gate
+```
+3. Add more vehicle or Classes
+```
+results = model.track(frame,  classes=[2, 5], conf=0.3, iou=0.5, persist=True, tracker="bytetrack.yaml") # Add class id on classes list
+```
+# please refer to model.names to get the coresponding class id
+4. Changing the Input Video Path
 If your video file is in a different location or has a different name, update the video_path variable in the vehicle_detection.py script:
 ```
 video_path = "data/your_video_name.mp4"
