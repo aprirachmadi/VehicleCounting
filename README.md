@@ -69,7 +69,9 @@ python src/vehicle_detection_and_counting.py
 This script will process the video and generate an output video with vehicle detections and gate crossing counts. The output video will be saved in the output/ directory as output_multi_gate_vehicle_detection.mp4.
 
 3. Run the Python Notebook (Alternative)
+
 Open and run the vehicle detection notebook:
+
 Navigate to the notebooks/ directory and open the vehicle-detection-and-counting.ipynb file using Jupyter Notebook, Jupyter Lab, or any compatible environment.
 Run each cell sequentially by selecting the cell and clicking the "Run" button or pressing Shift + Enter. The notebook will process the video, display annotated frames with detected vehicles, and show the gate crossing counts.
 
