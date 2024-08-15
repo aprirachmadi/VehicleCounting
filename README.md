@@ -25,7 +25,7 @@ VehicleCounting/
 └── .gitignore                             # Files and directories to ignore in Git
 ```
 
-Requirements
+## Requirements
 Before running the project, ensure you have the following dependencies installed:
 ```
 Python 3.8+
@@ -40,7 +40,7 @@ pip install -r requirements.txt
 ```
 Note: Make sure to have a GPU-enabled machine for better performance, as YOLOv8 is computationally intensive.
 
-How to Run
+## How to Run
 1. Clone the Repository
 Clone this repository to your local machine:
 ```
@@ -68,7 +68,7 @@ Ensure that all required dependencies are installed, and modify the input video 
 4. Review the Output
 After the script finishes running, you can find the processed video in the output/ directory. The video will display the vehicles detected and annotated with the gates they have crossed.
 
-Customization
+## Customization
 1. Adjusting Gate Coordinates
 If you need to change the gate positions, you can modify the coordinates in the vehicle_detection.py script:
 ```
