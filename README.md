@@ -33,7 +33,7 @@ VehicleCounting/
 ## Requirements
 Before running the project, ensure you have the following dependencies installed:
 Python version 3.10.13
-Make sure use python version bellow 3.12 for the supervision 0.14.0 to work
+Make sure use python version below 3.12 for the supervision 0.14.0 to work
 ```
 ultralytics==8.2.77
 supervision==0.14.0
@@ -68,7 +68,7 @@ python src/vehicle_detection_and_counting.py
 ```
 This script will process the video and generate an output video with vehicle detections and gate crossing counts. The output video will be saved in the output/ directory as output_multi_gate_vehicle_detection.mp4.
 
-3. Run the Python Notebook (Alternative)
+4. Run the Python Notebook (Alternative)
 
 Open and run the vehicle detection notebook:
 
@@ -77,7 +77,7 @@ Run each cell sequentially by selecting the cell and clicking the "Run" button o
 
 Ensure that all required dependencies are installed, and modify the input video path if necessary.
 
-4. Review the Output
+5. Review the Output
 After the script finishes running, you can find the processed video in the output/ directory. The video will display the vehicles detected and annotated with the gates they have crossed.
 
 ## Customization
@@ -87,7 +87,7 @@ If you need to change the gate positions, you can modify the coordinates in the 
 START_1, END_1 = sv.Point(10, 135), sv.Point(87, 151)
 # ...
 ```
-2. Add more gate
+2. Add more gates
 If you need to add more gate, you can modify the coordinates in the vehicle_detection_and_counting.py script:
 ```
 START_1, END_1 = sv.Point(10, 135), sv.Point(87, 151) # Add your own define gate
@@ -103,7 +103,7 @@ crossed_objects = [defaultdict(bool) for _ in range(8)] # change the number of d
 ```
 results = model.track(frame,  classes=[2, 5], conf=0.3, iou=0.5, persist=True, tracker="bytetrack.yaml") # Add class id on classes list
 ```
-please refer to model.names to get the coresponding class id
+please refer to model.names to get the corresponding class id
 
 4. Changing the Input Video Path
 If your video file is in a different location or has a different name, update the video_path variable in the vehicle_detection_and_counting.py script:
